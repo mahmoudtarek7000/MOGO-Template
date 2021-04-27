@@ -1,0 +1,126 @@
+%underline {
+    content: " ";
+    width: 60px;
+    height: 3px;
+    background-color: $lineClr;
+    margin: 10px 0;
+    top :50px;
+    left: 50%;
+    transform: translate(-50%, -50%) ;
+    position: absolute;
+ }
+ %head-font {
+    font : {
+   weight: 700;
+   family: "Montserrat";
+}
+%sec-head {
+ font-weight: 400;
+ font-family: "Kaushan Script";
+}
+}
+%slider-font {
+   font : {
+   size: 24px;
+   weight: 300;
+   family: "Roboto";
+}
+line-height: 36px;
+}
+%before-line {
+   content: " ";
+   width: 60px;
+   height: 3px;
+   background-color: $lineClr;
+   margin: 10px 0;
+   top :8px;
+   left: -40px;
+   transform: translate(-50%, -50%) ;
+   position: absolute;
+}
+ %small-head {
+    font-size: 24px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Kaushan Script";
+ }
+ 
+ %section-header {
+    font-size: 30px;
+    color: #333333;
+    font-weight: 700;
+    font-family: "Montserrat";
+ }
+
+ %main-text {
+   font-size: 15px;
+   line-height: 24px;
+   font-weight: 400;
+   font-family: "Roboto";
+   text-align: center;
+ }
+
+ %overlay {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   height: 100%;
+   width: 100%;
+   opacity: 0;
+   transition: .5s ease;
+   background: linear-gradient(rgba(219, 116, 117, 0.6) ,rgba(228, 205, 125, 0.75));;
+ }
+
+ %overlay-link {
+   font-size: 14px;
+   color: #fff;
+   height: 40px;
+   width: 40px;
+   line-height: 40px;
+   text-align: center;
+   border-radius: 10px 10px 10px 0;
+   display: block;
+   margin: 2.5px;
+ }
+
+ %overlay-icon {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+ }
+
+%date-rec {
+   background-color: $iconSecClr;
+   position: absolute;
+   left: -3%;
+   bottom: 10px;
+   color: #ffffff;
+   padding: 0 15px;
+   text-align: center;
+}
+
+ %text-decrib {
+   font: {
+      size: 15px;
+      weight: 400;
+      family: "Roboto";
+      }
+      line-height: 24px;
+  }
+ 
+  %parts-header {
+   font: {
+      size: 14px;
+      weight: 400;
+      family:"Montserrat";
+      }
+  }
+

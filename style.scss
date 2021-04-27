@@ -1,0 +1,483 @@
+@import 'partial/var';
+@import 'partial/function';
+@import 'partial/placeholder'; 
+nav {
+    a {
+        @extend %parts-header;
+    }
+}
+.Home {
+    background: linear-gradient(rgba(219, 116, 117, 0.6) ,rgba(228, 205, 125, 0.75)),url('./assets/img/homebg.jpg') ;
+    background-position: center;
+    background-size: cover;
+    .main_head {
+        text-align: center;
+        color: #ffffff;
+        width: 83%;
+    h1 {
+        font-size: convertSize(150);
+        @extend %head-font;
+        @media (max-width: 992px) {
+            font-size: convertSize(65);
+        }
+        @media (max-width: 420px) {
+            font-size: convertSize(45);
+        }
+    }
+    h3 {
+        font :
+        { size: convertSize(72);
+          weight: 400;
+        family: "Kaushan Script";
+        }
+        @media (max-width: 992px) {
+            font-size: convertSize(45);
+        }
+        @media (max-width: 420px) {
+            font-size: convertSize(34);
+        }
+    }
+}
+.carousel-indicators{
+ li {
+     width: 24%;
+ }
+} 
+}
+/* about */
+.about {
+    .header {
+        h5 {
+           @extend %small-head;
+        }
+        h3 {
+            @extend %section-header;
+            position: relative;
+            &::after {
+                @extend %underline ;
+            }
+        }
+        p {
+           @extend %main-text;
+        }
+    }
+    .row {
+        .work_img {
+            position: relative;
+            &:hover {
+                 box-shadow: 5px 5px 10px $iconSecClr;
+                .img-fluid {
+                    opacity: 0.3;
+                }
+                    .middle_overlay {
+                        opacity: 1;
+                    }
+                }
+                .middle_overlay {
+                    @extend %overlay;
+                }
+                a {
+                    @extend %overlay-link ;
+                    i {
+                      @extend %overlay-icon;
+                    }
+                }
+            }
+        }
+    }
+/* counter */
+.counter {
+    background-color: $iconClr;
+    .counter-content {
+        padding: 90px 0;
+        border-right: 0.5px solid #fff;
+        &:first-child {
+            border-left: 0.5px solid #fff;
+        }
+        h2 {
+            font-size: convertSize(72);
+          @extend %head-font;
+        }
+        p {
+            font-size: 14px; 
+            @extend %sec-head ;
+        }
+        @media (max-width:768px) {
+            border: {
+                bottom: 0.5px solid #fff;
+                right: 0; }
+                &:first-child { border-left:0; }
+        }
+    }
+}
+/* amazing-service */
+.amazing-service {
+    .header {
+        h5 {
+           @extend %small-head;
+        }
+        h3 {
+            @extend %section-header;
+            position: relative;
+            &::after {
+                @extend %underline ;
+            }
+            @media (max-width: 360px){
+                font-size: 26px;
+            } 
+        }
+        p {
+           @extend %main-text;
+        }
+    }
+    .row {
+        .icon {
+            color: $iconClr ;
+            font-size: convertSize(22);
+        }
+        h5 {
+           @extend %parts-header;
+        }
+            p {
+               @extend %text-decrib;
+            }
+        }
+    }
+/* design */
+.design {
+    background:  linear-gradient(rgba(255, 255, 255, 0.6),rgba(255, 255, 255, 0.75)),url('./assets/img/divicebg.jpg') ;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    .header {
+        margin-top: 8rem;
+        h5 {
+           @extend %small-head;
+        }
+        h3 {
+            @extend %section-header;
+            position: relative;
+            &::after {
+                @extend %underline ;
+            }
+        }
+    }
+    .sec-img {
+        position: absolute;
+        bottom: -12%;
+        right: 16%;
+    }
+}
+/* services */
+.services {
+    .header {
+        margin-top: 8rem;
+        h5 {
+           @extend %small-head;
+        }
+        h3 {
+            @extend %section-header;
+            position: relative;
+            &::after {
+                @extend %underline ;
+            }
+        }
+        p {
+           @extend %main-text;
+        }
+    }
+    .accordion {
+
+        .card-header {
+           @extend %parts-header;
+            i {
+                color: $iconClr;
+            }
+        }
+        .card-body {
+         @extend %text-decrib;
+         height: 180px;
+         overflow: auto;
+        }
+    }
+}
+/* comment */
+.comment {
+    background-color: $secClr;
+  .comment-body {
+      p{
+        @extend %slider-font;
+        color: $mainClr;
+      }
+      h5 {
+          margin-left: 70px;
+          position: relative;
+        @extend %small-head;
+        &::before {
+            @extend %before-line ;
+        }
+      }
+  }
+}
+/* team */
+.team {
+    .header {
+        margin-top: 8rem;
+        h5 {
+           @extend %small-head;
+        }
+        h3 {
+            @extend %section-header;
+            position: relative;
+            &::after {
+                @extend %underline ;
+            }
+        }
+        p {
+           @extend %main-text;
+        }
+    }
+    .team_img {
+        position: relative;
+        &:hover {
+            box-shadow: 5px 5px 10px $iconSecClr;
+           .img-fluid {
+               opacity: 0.3;
+           }
+               .middle_overlay {
+                   opacity: 1;
+               }
+           }
+           .middle_overlay {
+               @extend %overlay;
+               justify-content: center;
+               align-items: center;
+           }
+           a {
+               @extend %overlay-link ;
+               i {
+                   font-size:convertSize(20);
+                   background-color: $iconBg;
+                   padding: 20px;
+                   color: $lineClr;
+               }
+           }
+    }
+    .team-text {
+        h6 {
+           @extend %parts-header ;
+        }
+        p {
+          @extend %text-decrib;
+        }
+    }
+}
+/* our work */
+.our_work {
+    .header {
+        h5 {
+           @extend %small-head;
+        }
+        h3 {
+            @extend %section-header;
+            position: relative;
+            &::after {
+                @extend %underline ;
+            }
+            @media (max-width: 360px){
+                font-size: 24px;
+            } 
+        }
+        p {
+           @extend %main-text;
+        }
+    }
+    .row {
+    .work-img{
+        position: relative;
+        &:hover {
+            .img-fluid {
+                opacity: 0.3;
+            }
+                .middle_overlay {
+                    opacity: 1;
+                }
+            }
+            .middle_overlay {
+                @extend %overlay;
+            }
+            a {
+                @extend %overlay-link ;
+                i {
+                  @extend %overlay-icon;
+                  font-size: convertSize(38);
+                }
+    }
+    }
+}
+}
+/* testimonial */
+.testimonial {
+  .testimonial-body {
+      p{
+        @extend %slider-font;     
+        color: $mainClr;
+      }
+      h5 {
+       @extend %small-head;
+          margin-left: 70px;
+          position: relative;
+        &::before {
+            @extend %before-line ;
+        }
+      }
+  }
+}
+/* clients */
+.clients {
+    background:  linear-gradient(rgba(255, 255, 255, 0.6),rgba(255, 255, 255, 0.75)),url('./assets/img/clientbg.jpg') ;
+    background-position: center;
+    background-size: cover;
+    .header {
+        margin-top: 8rem;
+        h5 {
+           @extend %small-head;
+        }
+        h3 {
+            @extend %section-header;
+            position: relative;
+            &::after {
+                @extend %underline ;
+            }
+            @media (max-width: 360px){
+                font-size: convertSize(28);
+            } 
+        }
+        p {
+           @extend %main-text;
+        }
+    }
+    .row {
+        margin-top: 4rem;
+        .media {
+            .media-title {
+                position: relative;
+                &::after {
+                    @extend %underline;
+                    left:30px;
+                }
+                h5 {
+                  @extend %parts-header ;
+            } }
+            p {
+                @extend %text-decrib;
+            }
+        }
+    }
+}
+/* blog */
+.blog {
+    .header {
+        margin-top: 8rem;
+        h5 {
+           @extend %small-head;
+        }
+        h3 {
+            @extend %section-header;
+            position: relative;
+            &::after {
+                @extend %underline ;
+            }
+        }
+    }
+    .row {
+        .card {
+            .blog_post {
+                position: relative;
+                .date {
+                   @extend %date-rec;
+                    h3 {
+                        padding-top: 5px;
+                    }
+                p{
+                    font: 
+                    {
+                     size:convertSize(12);
+                     family: "Roboto";
+                    }
+                }
+                }
+            }
+            .card-body {
+                    h6 {
+                        @extend %parts-header;
+                    }
+                    .card-text {
+                        @extend %text-decrib;
+                    }
+            }
+            a {
+                font-size: convertSize(15);
+                color: $iconSecClr;
+            }
+        }
+    }
+}
+/* location */
+.location {
+    background:linear-gradient(rgba(255, 255, 255, 0.6),rgba(255, 255, 255, 0.75)),url('./assets/img/mapbg.jpg') ;
+    background-position: center;
+    background-size: cover;
+    .map {
+        color: $lineClr;
+        h2 {
+            font: {
+            size: convertSize(28);
+            family: "Montserrat";
+        } 
+    }
+    }
+}
+/* footer */
+footer {
+    background-color: $secClr;
+    .contact-us {
+    .footer-content {
+        .footer-text {
+          @extend %text-decrib;
+        }
+    }
+.followers {
+    @extend  %parts-header;
+}
+.follow {
+    p {
+        @extend %text-decrib;
+    }
+    i {
+    color: $iconSecClr;
+    }
+}
+button {
+    background-color: $iconSecClr;
+}
+}
+.footer-blog {
+    max-width: 450px;
+    .card {
+        background-color: $secClr ;
+    h6 {
+       @extend %parts-header;
+    }
+    p {
+       @extend %text-decrib;
+       font-size: convertSize(13);
+    }
+}
+}
+.footer-inst {
+    h6 {
+   @extend %parts-header;
+    }
+}
+}
